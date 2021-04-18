@@ -1,3 +1,3 @@
-# psychic-octo-train
-idk what im doing
-the name was chosen by github
+# first repo
+as you can guess<br />
+this is my first repository
