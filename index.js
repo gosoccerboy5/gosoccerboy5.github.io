@@ -1,3 +1,7 @@
+function wrapMain() {
+  document.body.innerHTML = '<div id = "main">' + document.body.innerHTML + "</div";
+}
+
 function addFooter () {
   let footer = document.createElement("div");
   footer.id = "footer";
@@ -19,6 +23,7 @@ function addFavicon () {
   document.head.appendChild(favicon);
 }
 
+wrapMain();
 addFooter();
 addStylesheet();
 addFavicon();
