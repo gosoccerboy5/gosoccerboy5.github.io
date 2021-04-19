@@ -8,14 +8,14 @@ function addFooter () {
 function addStylesheet () {
   let stylesheet = document.createElement("link");
   stylesheet.rel = "stylesheet";
-  stylesheet.href = "index.css";
+  stylesheet.href = "https://gosoccerboy5.github.io/index.css";
   document.head.appendChild(stylesheet);
 }
 
 function addFavicon () {
   let favicon = document.createElement("link");
   favicon.rel = "icon";
-  favicon.href = "favicon.ico";
+  favicon.href = "https://gosoccerboy5.github.io/favicon.ico";
   document.head.appendChild(favicon);
 }
 
