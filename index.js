@@ -11,5 +11,15 @@ function addStylesheet () {
   stylesheet.href = "index.css";
   document.head.appendChild(stylesheet);
 }
+
+function addFavicon () {
+  let favicon = document.createElement("link");
+  favicon.rel = "icon";
+  favicon.href = "favicon.ico";
+  document.head.appendChild(favicon);
+}
+
 addFooter();
 addStylesheet();
+addFavicon();
+// Hey. It's cringey code, but it works.
