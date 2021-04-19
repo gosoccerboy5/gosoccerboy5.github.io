@@ -23,7 +23,7 @@ for (let i = 0; i < rickrollLinks.length; i++) {
 }</textarea>
     Then, just add 'class = "rickroll"' to any link you want to be a rickroll.
     <script>
-      document.querySelector("#code").addEventListener(function(event) {
+      document.querySelector("#code").addEventListener("click", function(event) {
         document.querySelector("#code").select();
         document.execCommand('copy');
       });
