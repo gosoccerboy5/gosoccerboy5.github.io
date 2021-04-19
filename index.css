@@ -11,3 +11,13 @@ h1, h2 {
 #main {
   padding-left: 30px;
 }
+a {
+  color: #1aa0d8;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+a:visited {
+  color: #1aa0d8;
+}
