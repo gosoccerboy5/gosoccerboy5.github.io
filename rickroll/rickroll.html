@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Rickrolling people unsuspectingly</title>
+  </head>
+  <body>
+    <h1>Hello! Looks like you want to rickroll people?</h1>
+    <h2>Well, you're in luck!</h2>
+    This code allows you to rickroll people with HTML, but in a super-secret unsuspecting way.<br>
+    To use it, just copy this code (you can click on it to copy it).
+    <textarea id = "code" readonly = "true">const rickroll = function (event) { 
+  event.preventDefault(); 
+  document.write("Get 'rolled lol"); 
+  window.setTimeout(function() {
+    document.body.innerHTML = '<iframe width="966" height="543" src="https://www.youtube.com/embed/dQw4w9WgXcQ?&autoplay=1" frameborder="0"></iframe>';
+    console.info("https://scratch.mit.edu/discuss/post/5069102/");
+  }, 500)
+}
+
+const rickrollLinks = document.getElementsByClassName("rickroll");
+for (let i = 0; i < rickrollLinks.length; i++) {
+  rickrollLinks[i].addEventListener("click", rickroll);
+}</textarea>
+    Then, just add 'class = "rickroll"' to any link you want to be a rickroll.
+    <script>
+      document.querySelector("#code").addEventListener(function(event) {
+        document.querySelector("#code").select();
+        document.execCommand('copy');
+      });
+    </script>
+    <script src = "index.js"></script>
+  </body>
+</html>
