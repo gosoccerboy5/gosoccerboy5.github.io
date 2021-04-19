@@ -4,3 +4,7 @@ html {
 h1, h2 {
   font-weight: 400;
 }
+#footer {
+  padding-top: 50px;
+  text-align: center;
+}
