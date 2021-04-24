@@ -40,7 +40,7 @@
         try {
           eval(document.querySelector("#code").value);
         } catch (e) {
-          document.querySelector("#result").value = e.toString() + e.lineNumber;
+          document.querySelector("#result").value = `${e} (line ${e.lineNumber}`;
         }
       });
     </script>
