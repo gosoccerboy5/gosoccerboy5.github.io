@@ -1,16 +1,11 @@
-# first repo
-as you can guess
-<br>
-this is my first repository
-<br>
-and i have **no clue** what im doing
-<br>
-Anyways, if you want to check it out, go to [gosoccerboy5.github.io](//gosoccerboy5.github.io)
-<br>
-Or if you want to check out the rickroll files, go to [/rickroll/rickroll](//gosoccerboy5.github.io/rickroll/rickroll).
-<br>
-Thats it
-<br>
-actually you can view the about page at [/about](//gosoccerboy5.github.io/about)
-<br>
-thats it so far
+# My First Repository
+I think I can officially claim I have some idea of what I'm doing, and thus I will start using proper spelling and capitalization.  
+Comprehensive list of links of interest:  
+<li>
+  <ul><a href = "//gosoccerboy5.github.io">Homepage</a></ul>
+  <ul><a href = "//gosoccerboy5.github.io/about">About page</a></ul>
+  <ul><a href = "//gosoccerboy5.github.io/rickroll/rickroll">How to rickroll people</a></ul>
+  <ul><a href = "//gosoccerboy5.github.io/test/javascript-ide">Javascript IDE online</a></ul>
+  <ul><a href = "//gosoccerboy5.github.io/404">404 page</a></ul>
+</li>
+ 
