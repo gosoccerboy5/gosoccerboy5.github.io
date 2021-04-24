@@ -5,7 +5,7 @@
     <style>
       textarea {
         font-family: Menlo, monospace;
-        font-size: 13;
+        font-size: 13px;
         width: 500px;
         height: 200px;
       }
@@ -33,14 +33,17 @@
     <textarea id = "result"></textarea>
     <script src = "/resources/index.js"></script>
     <script>
+      const code = document.querySelector("#code");
+      const result = document.querySelector("#result");
       console.log = function(text) {
-          document.querySelector("#result").value += (text + "\n");
+          result.value += (text + "\n");
       }
       document.querySelector("#run").addEventListener('click', function() {
         try {
-          eval(document.querySelector("#code").value);
+          result.value = "";
+          eval(code.value);
         } catch (e) {
-          document.querySelector("#result").value = `${e} (line ${e.lineNumber})`;
+          result.value = `${e} (line ${e.lineNumber})`;
         }
       });
     </script>
