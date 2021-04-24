@@ -6,14 +6,14 @@
       textarea {
         font-family: Menlo, monospace;
         font-size: 13;
-        width: 500;
-        height: 200;
+        width: 500px;
+        height: 200px;
       }
       button {
         background-color: #4CAF50; /* Green */
         border: none;
         color: white;
-        padding: 10px 25;
+        padding: 10px 25px;
         text-align: center;
         text-decoration: none;
         display: inline-block;
@@ -40,7 +40,7 @@
         try {
           eval(document.querySelector("#code").value);
         } catch (e) {
-          document.querySelector("#result").value = `${e} (line ${e.lineNumber}`;
+          document.querySelector("#result").value = `${e} (line ${e.lineNumber})`;
         }
       });
     </script>
