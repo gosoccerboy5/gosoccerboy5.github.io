@@ -1,5 +1,6 @@
 <!DOCTYPE HTML>
 <!-- https://gosoccerboy5.github.io/test/javascript-ide -->
+<!-- https://github.com/gosoccerboy5/gosoccerboy5.github.io/blob/main/test/javascript-ide.html -->
 <html>
   <head>
     <title>Online Javascript IDE</title>
@@ -42,7 +43,10 @@
       document.querySelector("#run").addEventListener('click', function() {
         try {
           result.value = "";
-          eval(code.value);
+          let output = eval(code.value);
+          if (output !== undefined) {
+            result.value += output;
+          }
         } catch (e) {
           result.value = `${e} (line ${e.lineNumber})`;
         }
