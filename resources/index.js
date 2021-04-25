@@ -5,7 +5,7 @@ function wrapMain() {
 function addFooter () {
   let footer = document.createElement("div");
   footer.id = "footer";
-  footer.innerHTML = '<a href="https://github.com/gosoccerboy5/gosoccerboy5.github.io"><img src="https://github.com/favicon.ico" title = "Source code on Github"></a> <a href="https://scratch.mit.edu/users/gosoccerboy5"><img src="https://avatars.githubusercontent.com/u/82768218" width="30" height="30" title = "My Scratch profile"></a>';
+  footer.innerHTML = '<a href="https://github.com/gosoccerboy5/gosoccerboy5.github.io"><img src="/resources/GitHub-Mark-64px.png" title = "Source code on Github" width = "30" height = "30"></a> <a href="https://scratch.mit.edu/users/gosoccerboy5"><img src="https://cdn2.scratch.mit.edu/get_image/user/13633428_60x60.png" width="30" height="30" title = "My Scratch profile"></a>';
   document.body.appendChild(footer);
 }
 
