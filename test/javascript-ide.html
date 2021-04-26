@@ -42,10 +42,11 @@
           console.log("Object {");
           for (let i in obj) {
             if (typeof obj[i] === 'object') {
-              console.log("  " + i + ": ");
+              console.log("  "   + i + ": ");
               printObj(obj[i]);
             } else {
-              console.log("  " + i + ": " + obj[i] + ",");
+              const typ = typeof obj[i] === 'string';
+              console.log(`  ${i}: ${typ?'"':""}${obj[i]}${typ?'"':""}`);
             }
           }
           console.log("}");
