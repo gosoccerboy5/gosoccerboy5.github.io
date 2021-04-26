@@ -38,8 +38,24 @@
       const code = document.querySelector("#code");
       const result = document.querySelector("#result");
       console.log = function(text) {
+        function printObj(obj) {
+          console.log("Object {");
+          for (let i in obj) {
+            if (typeof obj[i] === 'object') {
+              console.log("  " + i + ": ");
+              printObj(obj[i]);
+            } else {
+              console.log("  " + i + ": " + obj[i] + ",");
+            }
+          }
+          console.log("}");
+        }
+        if (typeof text !== 'object') {
           result.value += (text + "\n");
-      }
+        } else {
+          printObj(text);
+        }
+      };
       document.querySelector("#run").addEventListener('click', function() {
         try {
           result.value = "";
