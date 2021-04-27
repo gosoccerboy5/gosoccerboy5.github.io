@@ -33,5 +33,6 @@ function addFavicon () {
 wrapMain();
 addFooter();
 addStylesheet();
+addHeader();
 addFavicon();
 // Hey. It's cringey code, but it works.
