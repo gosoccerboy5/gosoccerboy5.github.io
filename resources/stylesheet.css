@@ -9,7 +9,7 @@ h1, h2 {
   text-align: center;
 }
 #main {
-  padding-left: 20px;
+  padding-left: 30px;
 }
 a {
   color: #1aa0d8;
@@ -20,4 +20,10 @@ a:hover {
 }
 a:visited {
   color: #1aa0d8;
+}
+body {
+  margin: 0;
+}
+#header {
+  background-color: #0f8bc0;
 }
