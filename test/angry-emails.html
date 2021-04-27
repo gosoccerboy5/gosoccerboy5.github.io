@@ -42,11 +42,19 @@ Nothing is stored, so say whatever you want.">Type whatever you like!</h2>
     <script src = "/resources/index.js"></script>
     <script>
       document.querySelector('#sendit').addEventListener('click', function() {
-        document.querySelector('#emailsent').style.display = '';
-        window.setTimeout(function() {
-          document.querySelector('#emailsent').style.display = 'none';
-        }, 2000);
-      });
+  if (document.querySelector('#text').value !== "") {
+    window.setTimeout(function() {
+      if (confirm("Reply email incoming. Do you want to view it?")) {
+        alert("From: " + document.querySelector("#sendee").value + "\nwhy r u so mean to me\nim sorry\nim super dumb");
+      }
+    }, 5000);
+    document.querySelector('#emailsent').style.display = '';
+    document.querySelector('#text').value = "";
+    window.setTimeout(function() {
+      document.querySelector('#emailsent').style.display = 'none';
+    }, 2000);
+  }
+});
     </script>
   </body>
 </html>
