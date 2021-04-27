@@ -1,3 +1,10 @@
+function addHeader() {
+  var header = document.createElement("div");
+  header.id = "header";
+  header.innerHTML = '<a href="/">Homepage</a>';
+  document.body.insertBefore(header, document.querySelector("#main"));
+}
+
 function wrapMain() {
   document.body.innerHTML = '<div id = "main">' + document.body.innerHTML + "</div>";
 }
