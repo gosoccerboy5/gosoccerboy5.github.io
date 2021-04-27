@@ -34,3 +34,6 @@ body {
   color: black;
   padding-right: 30px;
 }
+#header a:hover {
+  text-decoration: none;
+}
