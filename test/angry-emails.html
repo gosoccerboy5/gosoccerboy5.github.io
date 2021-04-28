@@ -45,13 +45,15 @@ let fakeResponses = null;
 fetch("email-responses.json").then(function(result) {
   return result.json();
 }).then(function(data) {
+  fakeResponses = data;
   console.log(data);
 });
 document.querySelector('#sendit').addEventListener('click', function() {
   if (document.querySelector('#text').value !== "") {
     window.setTimeout(function() {
-      if (confirm("Reply email incoming. Do you want to view it?")) {
-        alert("From: " + document.querySelector("#sendee").value + "\nwhy r u so mean to me\nim sorry\nim super dumb");
+      var randInt = (min, max) => Math.floor(Math.random() * (max - min) + min);
+      if ((fakeResponses !== null) && (confirm("Reply email incoming. Do you want to view it?"))) {
+        alert("From: " + document.querySelector("#sendee").value + "\n" + fakeResponses[randInt(0, fakeResponses.length)]);
       }
     }, 5000);
     document.querySelector('#emailsent').style.display = '';
