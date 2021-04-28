@@ -43,7 +43,7 @@ Nothing is stored, so say whatever you want.">Type whatever you like!</h2>
     <script>
 let fakeResponses = null;
 fetch("email-responses.json").then(function(result) {
-  return result;
+  return result.json();
 }).then(function(data) {
   console.log(data);
 });
