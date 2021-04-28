@@ -41,7 +41,13 @@ Nothing is stored, so say whatever you want.">Type whatever you like!</h2>
     <div id="emailsent" style="display: none;">Email sent successfully!</div>
     <script src = "/resources/index.js"></script>
     <script>
-      document.querySelector('#sendit').addEventListener('click', function() {
+let fakeResponses = null;
+fetch("email-responses.json").then(function(result) {
+  return result;
+}).then(function(data) {
+  console.log(data);
+});
+document.querySelector('#sendit').addEventListener('click', function() {
   if (document.querySelector('#text').value !== "") {
     window.setTimeout(function() {
       if (confirm("Reply email incoming. Do you want to view it?")) {
