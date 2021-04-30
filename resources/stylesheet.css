@@ -37,3 +37,6 @@ body {
 #header a:hover {
   text-decoration: none;
 }
+a:active {
+  color: green;
+}
