@@ -11,21 +11,6 @@
     This code allows you to rickroll people with HTML, but in a super-secret unsuspecting way.<br>
     To use it, just copy this script tag (you can click on it to select it).
     <br>
-    <!-- <textarea id = "code" readonly = "true">const rickroll = function (event) { 
-  event.preventDefault(); 
-  document.write("Get 'rolled lol"); 
-  window.setTimeout(function() {
-    document.body.innerHTML = '<iframe width="966" height="543" src="https://www.youtube.com/embed/dQw4w9WgXcQ?&autoplay=1" frameborder="0"></iframe>';
-    console.info("https://scratch.mit.edu/discuss/post/5069102/");
-  }, 500)
-}
-
-const rickrollLinks = document.getElementsByClassName("rickroll");
-for (let i = 0; i < rickrollLinks.length; i++) {
-  rickrollLinks[i].addEventListener("click", rickroll);
-}</textarea>
-      -->
-      
     <textarea id = "code" readonly = "true">&lt;script src = "https://gosoccerboy5.github.io/rickroll/rickroll.js"&gt;&lt;/script&gt;</textarea>
     <br>
     Then, just add 'class = "rickroll"' to any link you want to be a rickroll.
@@ -36,7 +21,6 @@ for (let i = 0; i < rickrollLinks.length; i++) {
     <script>
       document.querySelector("#code").addEventListener("click", function(event) {
         document.querySelector("#code").select();
-        // document.execCommand('copy');
       });
     </script>
   </body>
