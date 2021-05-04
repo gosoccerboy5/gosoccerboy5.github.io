@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Jokes</title>
+    <style>
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      #spinner {
+        border: 16px solid #f3f3f3; /* Light grey */
+        border-top: 16px solid #3498db; /* Blue */
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        animation: spin 2s linear infinite;
+      }
+      /* https://www.w3schools.com/howto/howto_css_loader.asp */
+      /* I used w3schools, im sorry ok? */
+    </style>
+  </head>
+  <body>
+    <button id = "tellJoke">Tell me a joke!</button>
+    <br>
+    <div id = "spinner"></div>
+    <br>
+    <br>
+    <small>Credit to <a href = "https://github.com/jeffalo/my-ocular/blob/master/jokes.json">https://github.com/jeffalo/my-ocular/blob/master/jokes.json</a> for the jokes</small>
+    <script src = "/resources/index.js"></script>
+    <script>
+      let jokes = null;
+      function fetchJokes() {
+        fetch("https://raw.githubusercontent.com/jeffalo/my-ocular/master/jokes.json").then(function(data) {
+          return data.json();
+        }).then(function(data) {
+          jokes = data;
+        }).catch(function(err) {
+          console.log(err);
+          if (confirm("We had an error loading the jokes. Try again?")) {
+            fetchJokes()
+          }
+        });
+      document.querySelector("#spinner").style.display = "none";
+    </script>
+  </body>
+</html>
+      
