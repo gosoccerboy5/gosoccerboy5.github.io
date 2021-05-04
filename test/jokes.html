@@ -1,4 +1,6 @@
 <!DOCTYPE HTML>
+<!--https://github.com/gosoccerboy5/gosoccerboy5.github.io/blob/main/test/jokes.html-->
+<!--https://gosoccerboy5.github.io/test/jokes.html-->
 <html>
   <head>
     <title>Jokes</title>
@@ -8,18 +10,29 @@
         100% { transform: rotate(360deg); }
       }
       #spinner {
-        border: 10px solid #f3f3f3; /* Light grey */
-        border-top: 10px solid #3498db; /* Blue */
+        border: 7px solid #f3f3f3; /* Light grey */
+        border-top: 7px solid #f00; /* Blue */
         border-radius: 50%;
         width: 30px;
         height: 30px;
-        animation: spin 2s linear infinite;
+        animation: spin 1.5s linear infinite;
       }
       /* https://www.w3schools.com/howto/howto_css_loader.asp */
       /* I used w3schools, im sorry ok? */
+      button {
+        background-color: #00d000;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        height: 30px;
+      }
+      button:active {
+        background-color: green;
+      }
     </style>
   </head>
   <body>
+    <br>
     <button id = "tellJoke">Tell me a joke!</button>
     <br>
     <div id = "spinner"></div>
