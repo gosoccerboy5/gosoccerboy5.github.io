@@ -40,3 +40,13 @@ body {
 a:active {
   color: #00ce81;
 }
+button {
+  background-color: #00d000;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  height: 30px;
+}
+button:active {
+  background-color: green;
+}
