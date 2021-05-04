@@ -42,6 +42,14 @@
           }
         });
       }
+      const rand = (min, max) => Math.floor(Math.random() * (max - min) + min);
+      document.querySelector("#tellJoke").addEventListener("click", function() {
+        document.querySelector("#spinner").style.display = "";
+        window.setTimeout(function() {
+          document.querySelector("#spinner").style.display = "none";
+          alert(jokes[rand(0, jokes.length)]);
+        }, 2000);
+      });
       fetchJokes();
     </script>
   </body>
