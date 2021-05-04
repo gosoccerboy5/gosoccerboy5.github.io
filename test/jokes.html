@@ -29,6 +29,7 @@
     <script src = "/resources/index.js"></script>
     <script>
       let jokes = null;
+      document.querySelector("#spinner").style.display = "none";
       function fetchJokes() {
         fetch("https://raw.githubusercontent.com/jeffalo/my-ocular/master/jokes.json").then(function(data) {
           return data.json();
@@ -41,7 +42,7 @@
           }
         });
       }
-      document.querySelector("#spinner").style.display = "none";
+      fetchJokes();
     </script>
   </body>
 </html>
