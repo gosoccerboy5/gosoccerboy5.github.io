@@ -50,3 +50,6 @@ button {
 button:active {
   background-color: green;
 }
+.small {
+  font-size: 10px;
+}
