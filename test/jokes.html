@@ -53,6 +53,7 @@
           window.setTimeout(function() {
             document.querySelector("#spinner").style.display = "none";
             alert(jokes[rand(0, jokes.length)]);
+            isLoading = false;
           }, 2000);
         }
         isLoading = true;
