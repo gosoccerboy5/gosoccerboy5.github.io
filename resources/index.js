@@ -1,6 +1,6 @@
 function addBase() {
   let base = document.createElement("base");
-  base.href = "file:///Users/gosoccerboy5/Documents/GitHub/gosoccerboy5.github.io/";
+  base.href = "https://gosoccerboy5.github.io";
   document.head.appendChild(base);
 }
 
