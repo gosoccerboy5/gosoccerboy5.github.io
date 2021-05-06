@@ -1,3 +1,9 @@
+function addBase() {
+  let base = document.createElement("base");
+  base.href = "file:///Users/gosoccerboy5/Documents/GitHub/gosoccerboy5.github.io/";
+  document.head.appendChild(base);
+}
+
 function addHeader() {
   var header = document.createElement("div");
   header.id = "header";
@@ -30,6 +36,7 @@ function addFavicon() {
   document.head.appendChild(favicon);
 }
 
+addBase();
 wrapMain();
 addFooter();
 addStylesheet();

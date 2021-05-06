@@ -42,7 +42,7 @@ Nothing is stored, so say whatever you want.">Type whatever you like!</h2>
     <script src = "../resources/index.js"></script>
     <script>
 let fakeResponses = null;
-fetch("./email-responses.json").then(function(result) {
+fetch("../email-responses.json").then(function(result) {
   return result.json();
 }).then(function(data) {
   fakeResponses = data;
