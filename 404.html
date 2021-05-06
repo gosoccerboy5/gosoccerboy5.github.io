@@ -19,6 +19,7 @@
      <script src = "resources/index.js"></script> 
     <script>
       document.querySelector("#goback").addEventListener("click", function(event) {
+        event.preventDefault();
         history.go(-1);
       });
     </script>
