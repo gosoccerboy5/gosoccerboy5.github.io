@@ -39,10 +39,10 @@ Nothing is stored, so say whatever you want.">Type whatever you like!</h2>
     <br>
     <button id="sendit">Send email!</button>
     <div id="emailsent" style="display: none;">Email sent successfully!</div>
-    <script src = "/resources/index.js"></script>
+    <script src = "../resources/index.js"></script>
     <script>
 let fakeResponses = null;
-fetch("email-responses.json").then(function(result) {
+fetch("./email-responses.json").then(function(result) {
   return result.json();
 }).then(function(data) {
   fakeResponses = data;
