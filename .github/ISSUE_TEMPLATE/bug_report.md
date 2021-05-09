@@ -3,7 +3,7 @@ name: Bug report
 about: Create a report to help us improve
 title: 'Bug: '
 labels: 'bug'
-assignees: 'Accio1'
+assignees: 'gosoccerboy5'
 
 ---
 
