@@ -21,7 +21,7 @@
     <button id = "run" title = "Run your scripts.">Run code</button>
     <br><br>
     <textarea id = "result" readonly = "true" title = "Results"></textarea>
-    <script src = "../resources/index.js"></script>
+    <script src = "../resources/index.js" onload="reference('../')"></script>
     <script>
       const code = document.querySelector("#code");
       const result = document.querySelector("#result");
