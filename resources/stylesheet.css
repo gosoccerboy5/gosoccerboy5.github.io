@@ -40,7 +40,7 @@ body {
   text-decoration: none;
 }
 a:active {
-  color: blue;
+  color: red;
 }
 button {
   background-color: #00d000;
