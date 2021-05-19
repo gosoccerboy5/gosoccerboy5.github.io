@@ -31,9 +31,9 @@ body {
   padding-left: 20px;
 }
 #header a {
-	color: white;
-	font-weight: 400;
-	font-size: 17px;
+  color: white;
+  font-weight: 400;
+  font-size: 17px;
   padding-right: 30px;
 }
 #header a:hover {
