@@ -35,11 +35,16 @@ function reference(link) {
     document.head.innerHTML += "<meta charset='UTF-8' />";
   }
 
+  function makeDraggable() {
+    document.querySelector("html").draggable = true; // It's fun to drag the page around
+  }
+
   wrapMain();
   addFooter();
   addStylesheet();
   addHeader();
   addFavicon();
   addCharEncoding();
+  makeDraggable();
   // Hey. It's cringey code, but it works.
 }
