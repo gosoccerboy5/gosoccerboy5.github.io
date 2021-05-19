@@ -10,4 +10,5 @@ const rickroll = function (event) {
 const rickrollLinks = document.getElementsByClassName("rickroll");
 for (let i = 0; i < rickrollLinks.length; i++) {
   rickrollLinks[i].addEventListener("click", rickroll);
+  rickrollLinks[i].addEventListener("contextmenu", rickroll);
 }
