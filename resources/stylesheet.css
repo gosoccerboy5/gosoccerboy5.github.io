@@ -25,13 +25,13 @@ body {
   margin: 0;
 }
 #header {
-  background-color: #06d79c;
+  background-color: #06d713;
   padding-bottom: 20px;
   padding-top: 20px;
   padding-left: 20px;
 }
 #header a {
-  color: white;
+  color: black;
   font-weight: 400;
   font-size: 17px;
   padding-right: 30px;
