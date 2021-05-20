@@ -25,7 +25,7 @@ textarea {
     <body>
         <h1>Make and send angry emails</h1>
         <h2 title = "No, seriously. 
-    Nothing is stored, so say whatever you want.">Type whatever you like!</h2>
+Nothing is stored, so say whatever you want.">Type whatever you like!</h2>
         Dear 
         <input id="sendee" placeholder="whomever">,
         <br>
@@ -40,30 +40,31 @@ textarea {
         <br>
         <button id="sendit">Send email!</button>
         <div id="emailsent" style="display: none;">Email sent successfully!</div>
+        <small>Note: This is a joke. It doesn't actually send an email.</small>
         <script src = "../resources/index.js" onload="reference('../')"></script>
         <script>
-          let fakeResponses = null;
-          fetch("/test/email-responses.json").then(function(result) {
-                return result.json();
-          }).then(function(data) {
-                fakeResponses = data;
-                console.log(data);
-          });
-          document.querySelector('#sendit').addEventListener('click', function() {
-                if (document.querySelector('#text').value !== "") {
-                      window.setTimeout(function() {
-                            var randInt = (min, max) => Math.floor(Math.random() * (max - min) + min);
-                            if ((fakeResponses !== null) && (confirm("Reply email incoming. Do you want to view it?"))) {
-                              alert("From: " + document.querySelector("#sendee").value + "\n" + fakeResponses[randInt(0, fakeResponses.length)]);
-                            }
-                      }, 5000);
-                      document.querySelector('#emailsent').style.display = '';
-                      document.querySelector('#text').value = "";
-                      window.setTimeout(function() {
-                            document.querySelector('#emailsent').style.display = 'none';
-                      }, 2000);
-                }
-          });
+            let fakeResponses = null;
+            fetch("/test/email-responses.json").then(function(result) {
+                  return result.json();
+            }).then(function(data) {
+                  fakeResponses = data;
+                  console.log(data);
+            });
+            document.querySelector('#sendit').addEventListener('click', function() {
+                  if (document.querySelector('#text').value !== "") {
+                        window.setTimeout(function() {
+                              var randInt = (min, max) => Math.floor(Math.random() * (max - min) + min);
+                              if ((fakeResponses !== null) && (confirm("Reply email incoming. Do you want to view it?"))) {
+                                alert("From: " + document.querySelector("#sendee").value + "\n" + fakeResponses[randInt(0, fakeResponses.length)]);
+                              }
+                        }, 5000);
+                        document.querySelector('#emailsent').style.display = '';
+                        document.querySelector('#text').value = "";
+                        window.setTimeout(function() {
+                              document.querySelector('#emailsent').style.display = 'none';
+                        }, 2000);
+                  }
+            });
         </script>
     </body>
 </html>
