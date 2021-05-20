@@ -1,61 +1,61 @@
 html {
-  font-family: Helvetica Neue, Helvetica, sans-serif;
+    font-family: Helvetica Neue, Helvetica, sans-serif;
 }
 h1, h2 {
-  font-weight: 400;
+    font-weight: 400;
 }
 #footer {
-  padding-top: 50px;
-  text-align: center;
+    padding-top: 50px;
+    text-align: center;
 }
 #main {
-  padding-left: 30px;
+    padding-left: 30px;
 }
 a {
-  color: #1aa0d8;
-  text-decoration: none;
+    color: #1aa0d8;
+    text-decoration: none;
 }
 a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 a:visited {
-  color: #1aa0d8;
+    color: #1aa0d8;
 }
 body {
-  margin: 0;
+    margin: 0;
 }
 #header {
-  background-color: #06d713;
-  padding-bottom: 20px;
-  padding-top: 20px;
-  padding-left: 20px;
+    background-color: #06d713;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-left: 20px;
 }
 #header a {
-  color: black;
-  font-weight: 400;
-  font-size: 17px;
-  padding-right: 30px;
+    color: black;
+    font-weight: 400;
+    font-size: 17px;
+    padding-right: 30px;
 }
 #header a:hover {
-  text-decoration: none;
+    text-decoration: none;
 }
 a:active {
-  color: red;
+    color: red;
 }
 button {
-  background-color: #00d000;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  height: 30px;
-  transition-duration: 150ms;
+    background-color: #00d000;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    height: 30px;
+    transition-duration: 150ms;
 }
 button:active {
-  background-color: green;
+    background-color: green;
 }
 .small {
-  font-size: 10px;
+    font-size: 10px;
 }
 ::selection {
-  background: lightsteelblue;
+    background: lightsteelblue;
 }
