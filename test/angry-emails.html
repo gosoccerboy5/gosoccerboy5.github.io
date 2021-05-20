@@ -15,11 +15,12 @@ textarea {
     font-size: smaller;
     width: 500px;
     height: 200px;
-  font-family: Helvetica Neue, Helvetica, sans-serif;
+    font-family: Helvetica Neue, Helvetica, sans-serif;
 }
 #textcontainer {
     padding-top: 10px;
-}       </style>
+}      
+        </style>
     </head>
     <body>
         <h1>Make and send angry emails</h1>
@@ -43,25 +44,25 @@ textarea {
         <script>
           let fakeResponses = null;
           fetch("/test/email-responses.json").then(function(result) {
-            return result.json();
+                return result.json();
           }).then(function(data) {
-            fakeResponses = data;
-            console.log(data);
+                fakeResponses = data;
+                console.log(data);
           });
           document.querySelector('#sendit').addEventListener('click', function() {
-            if (document.querySelector('#text').value !== "") {
-              window.setTimeout(function() {
-                var randInt = (min, max) => Math.floor(Math.random() * (max - min) + min);
-                if ((fakeResponses !== null) && (confirm("Reply email incoming. Do you want to view it?"))) {
-                  alert("From: " + document.querySelector("#sendee").value + "\n" + fakeResponses[randInt(0, fakeResponses.length)]);
+                if (document.querySelector('#text').value !== "") {
+                      window.setTimeout(function() {
+                            var randInt = (min, max) => Math.floor(Math.random() * (max - min) + min);
+                            if ((fakeResponses !== null) && (confirm("Reply email incoming. Do you want to view it?"))) {
+                              alert("From: " + document.querySelector("#sendee").value + "\n" + fakeResponses[randInt(0, fakeResponses.length)]);
+                            }
+                      }, 5000);
+                      document.querySelector('#emailsent').style.display = '';
+                      document.querySelector('#text').value = "";
+                      window.setTimeout(function() {
+                            document.querySelector('#emailsent').style.display = 'none';
+                      }, 2000);
                 }
-              }, 5000);
-              document.querySelector('#emailsent').style.display = '';
-              document.querySelector('#text').value = "";
-              window.setTimeout(function() {
-                document.querySelector('#emailsent').style.display = 'none';
-              }, 2000);
-            }
           });
         </script>
     </body>
