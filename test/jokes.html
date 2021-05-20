@@ -2,64 +2,64 @@
 <!--https://github.com/gosoccerboy5/gosoccerboy5.github.io/blob/main/test/jokes.html-->
 <!--https://gosoccerboy5.github.io/test/jokes.html-->
 <html>
-  <head>
-    <title>Jokes</title>
-    <style>
-      @keyframes spin {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
-      }
-      #spinner {
-        border: 7px solid #f3f3f3; /* Light grey */
-        border-top: 7px solid #f00; /* Blue */
-        border-radius: 50%;
-        width: 30px;
-        height: 30px;
-        animation: spin 1.5s linear infinite;
-      }
-      /* https://www.w3schools.com/howto/howto_css_loader.asp */
-      /* I used w3schools, im sorry ok? */
-    </style>
-  </head>
-  <body>
-    <br>
-    <button id = "tellJoke">Tell me a joke!</button>
-    <br><br>
-    <div id = "spinner"></div>
-    <br>
-    <br>
-    <span class = "small" title = "Beware, many of the jokes are computer/programming-themed">Credit to <a href = "https://github.com/jeffalo/my-ocular/blob/master/jokes.json">https://github.com/jeffalo/my-ocular/blob/master/jokes.json</a> for the jokes</span>
-    <script src = "../resources/index.js" onload="reference('../')"></script>
-    <script>
-      let jokes = null;
-      let isLoading = false;
-      document.querySelector("#spinner").style.display = "none";
-      function fetchJokes() {
-        fetch("https://raw.githubusercontent.com/jeffalo/my-ocular/master/jokes.json").then(function(data) {
-          return data.json();
-        }).then(function(data) {
-          jokes = data;
-        }).catch(function(err) {
-          console.log(err);
-          if (confirm("We had an error loading the jokes. Try again?")) {
-            fetchJokes();
-          }
-        });
-      }
-      const rand = (min, max) => Math.floor(Math.random() * (max - min) + min);
-      document.querySelector("#tellJoke").addEventListener("click", function() {
-        document.querySelector("#spinner").style.display = "";
-        if (!isLoading) {
-          window.setTimeout(function() {
+    <head>
+        <title>Jokes</title>
+        <style>
+            @keyframes spin {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+            }
+            #spinner {
+                border: 7px solid #f3f3f3; /* Light grey */
+                border-top: 7px solid #f00; /* Blue */
+                border-radius: 50%;
+                width: 30px;
+                height: 30px;
+                animation: spin 1.5s linear infinite;
+            }
+            /* https://www.w3schools.com/howto/howto_css_loader.asp */
+            /* I used w3schools, im sorry ok? */
+        </style>
+    </head>
+    <body>
+        <br>
+        <button id = "tellJoke">Tell me a joke!</button>
+        <br><br>
+        <div id = "spinner"></div>
+        <br>
+        <br>
+        <span class = "small" title = "Beware, many of the jokes are computer/programming-themed">Credit to <a href = "https://github.com/jeffalo/my-ocular/blob/master/jokes.json">https://github.com/jeffalo/my-ocular/blob/master/jokes.json</a> for the jokes</span>
+        <script src = "../resources/index.js" onload="reference('../')"></script>
+        <script>
+            let jokes = null;
+            let isLoading = false;
             document.querySelector("#spinner").style.display = "none";
-            alert(jokes[rand(0, jokes.length)]);
-            isLoading = false;
-          }, 2000);
-        }
-        isLoading = true;
-      });
-      fetchJokes();
-    </script>
-  </body>
+            function fetchJokes() {
+                fetch("https://raw.githubusercontent.com/jeffalo/my-ocular/master/jokes.json").then(function(data) {
+                    return data.json();
+                }).then(function(data) {
+                    jokes = data;
+                }).catch(function(err) {
+                    console.log(err);
+                    if (confirm("We had an error loading the jokes. Try again?")) {
+                        fetchJokes();
+                    }
+                });
+            }
+            const rand = (min, max) => Math.floor(Math.random() * (max - min) + min);
+            document.querySelector("#tellJoke").addEventListener("click", function() {
+                document.querySelector("#spinner").style.display = "";
+                if (!isLoading) {
+                    window.setTimeout(function() {
+                        document.querySelector("#spinner").style.display = "none";
+                        alert(jokes[rand(0, jokes.length)]);
+                        isLoading = false;
+                    }, 2000);
+                }
+                isLoading = true;
+            });
+            fetchJokes();
+        </script>
+    </body>
 </html>
       
