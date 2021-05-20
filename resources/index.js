@@ -1,3 +1,4 @@
+// Thank you a lot to @Accio1 on Github for this technique!
 function reference(link) {
     function addHeader() {
         var header = document.createElement("div");
