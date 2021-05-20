@@ -2,60 +2,60 @@
 <!-- https://gosoccerboy5.github.io/test/javascript-ide -->
 <!-- https://github.com/gosoccerboy5/gosoccerboy5.github.io/blob/main/test/javascript-ide.html -->
 <html>
-  <head>
-    <title>Online Javascript IDE</title>
-    <style>
-      textarea {
-        font-family: Menlo, monospace;
-        font-size: 13px;
-        width: 500px;
-        height: 200px;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>My all new Javascript IDE</h1>
-    <h2>Try anything out!</h2>
-    <textarea id = "code" title = "Write code"></textarea>
-    <br><br>
-    <button id = "run" title = "Run your scripts.">Run code</button>
-    <br><br>
-    <textarea id = "result" readonly = "true" title = "Results"></textarea>
-    <script src = "../resources/index.js" onload="reference('../')"></script>
-    <script>
-      const code = document.querySelector("#code");
-      const result = document.querySelector("#result");
-      console.log = function(text) {
-        function printObj(obj) {
-          console.log("Object {");
-          for (let i in obj) {
-            if (typeof obj[i] === 'object') {
-              console.log("  "   + i + ": ");
-              printObj(obj[i]);
-            } else {
-              const typ = typeof obj[i] === 'string';
-              console.log(`  ${i}: ${typ?'"':""}${obj[i]}${typ?'"':""}`);
+    <head>
+        <title>Online Javascript IDE</title>
+        <style>
+            textarea {
+                font-family: Menlo, monospace;
+                font-size: 13px;
+                width: 500px;
+                height: 200px;
             }
-          }
-          console.log("}");
-        }
-        if (typeof text !== 'object') {
-          result.value += (text + "\n");
-        } else {
-          printObj(text);
-        }
-      };
-      document.querySelector("#run").addEventListener('click', function() {
-        try {
-          result.value = "";
-          let output = eval(code.value);
-          if (output !== undefined) {
-            result.value += output;
-          }
-        } catch (e) {
-          result.value = `${e} (line ${e.lineNumber})`;
-        }
-      });
-    </script>
-  </body>
+        </style>
+    </head>
+    <body>
+        <h1>My all new Javascript IDE</h1>
+        <h2>Try anything out!</h2>
+        <textarea id = "code" title = "Write code"></textarea>
+        <br><br>
+        <button id = "run" title = "Run your scripts.">Run code</button>
+        <br><br>
+        <textarea id = "result" readonly = "true" title = "Results"></textarea>
+        <script src = "../resources/index.js" onload="reference('../')"></script>
+        <script>
+            const code = document.querySelector("#code");
+            const result = document.querySelector("#result");
+            console.log = function(text) {
+                function printObj(obj) {
+                    console.log("Object {");
+                    for (let i in obj) {
+                        if (typeof obj[i] === 'object') {
+                            console.log("  "   + i + ": ");
+                            printObj(obj[i]);
+                        } else {
+                            const typ = typeof obj[i] === 'string';
+                            console.log(`  ${i}: ${typ?'"':""}${obj[i]}${typ?'"':""}`);
+                        }
+                    }
+                    console.log("}");
+                }
+                if (typeof text !== 'object') {
+                    result.value += (text + "\n");
+                } else {
+                    printObj(text);
+                }
+            };
+            document.querySelector("#run").addEventListener('click', function() {
+                try {
+                    result.value = "";
+                    let output = eval(code.value);
+                    if (output !== undefined) {
+                        result.value += output;
+                    }
+                } catch (e) {
+                    result.value = `${e} (line ${e.lineNumber})`;
+                }
+            });
+        </script>
+    </body>
 </html>
