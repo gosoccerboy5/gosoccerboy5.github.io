@@ -53,7 +53,7 @@
                         result.value += output;
                     }
                 } catch (e) {
-                    result.value = `${e} (line ${e.lineNumber})`;
+                    result.value = e.toString();
                 }
             });
         </script>
