@@ -46,6 +46,6 @@ function reference(link) {
     addHeader();
     addFavicon();
     addCharEncoding();
-    //makeDraggable();
+    // makeDraggable();
     // Hey. It's cringey code, but it works.
 }
