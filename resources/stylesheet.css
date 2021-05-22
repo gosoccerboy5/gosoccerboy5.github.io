@@ -2,7 +2,7 @@ html {
     font-family: Helvetica Neue, Helvetica, sans-serif;
 }
 html:root {
-    --normal-green: #06d713;
+    --light-green: #06d713;
 }
 h1, h2 {
     font-weight: 400;
@@ -28,7 +28,7 @@ body {
     margin: 0;
 }
 #header {
-    background-color: var(--normal-green);
+    background-color: var(--light-green);
     padding: 20px 0px 20px 10px;
 }
 #header a {
@@ -46,7 +46,7 @@ a:active {
     color: red;
 }
 button {
-    background-color: var(--normal-green);
+    background-color: var(--light-green);
     border: none;
     cursor: pointer;
     border-radius: 5px;
