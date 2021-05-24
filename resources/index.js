@@ -3,7 +3,7 @@ function reference(link) {
     function addHeader() {
         var header = document.createElement("header");
         header.id = "header";
-        header.innerHTML = '<a href="' + link + '">Homepage</a>\n<a href="' + link + 'help/roadmap.html">Roadmap</a>';
+        header.innerHTML = '<a href="' + link + '">Homepage</a>\n<a href="' + link + 'help/roadmap">Roadmap</a>';
         document.body.insertBefore(header, document.querySelector("#main"));
     }
 
