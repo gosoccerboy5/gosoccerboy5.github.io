@@ -68,3 +68,16 @@ code {
     background-color: #d2d2d2;
     border-radius: 2px;
 }
+textarea {
+    border: 2px solid black;
+    border-radius: 2px;
+}
+textarea:focus, input:focus {
+    outline: 0;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+input {
+    border: none;
+    border-bottom: 1px solid black;
+}
