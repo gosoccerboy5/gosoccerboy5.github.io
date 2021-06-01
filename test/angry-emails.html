@@ -1,3 +1,4 @@
+
 <!DOCTYPE HTML>
 <html>
     <head>
@@ -24,7 +25,7 @@ textarea {
     </head>
     <body>
         <h1>Make and send angry emails</h1>
-        <h2 title = "No, seriously. 
+        <h2 title="No, seriously. 
 Nothing is stored, so say whatever you want.">Type whatever you like!</h2>
         Dear 
         <input id="sendee" placeholder="whomever">,
@@ -41,7 +42,7 @@ Nothing is stored, so say whatever you want.">Type whatever you like!</h2>
         <button id="sendit">Send email!</button>
         <div id="emailsent" style="display: none;">Email sent successfully!</div>
         <small>Note: This is a joke. It doesn't actually send an email.</small>
-        <script src = "../resources/index.js" onload="reference('../');"></script>
+        <script src="../resources/index.js" onload="reference('../');"></script>
         <script>
             let fakeResponses = null;
             fetch("/test/email-responses.json").then(function(result) {
