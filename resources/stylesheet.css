@@ -61,9 +61,6 @@ button:active {
 .small {
     font-size: 10px;
 }
-::selection {
-    background: lightsteelblue;
-}
 code {
     background-color: #d2d2d2;
     border-radius: 2px;
