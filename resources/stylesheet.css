@@ -4,25 +4,11 @@ html {
 html:root {
     --light-green: #06d713;
 }
-h1, h2 {
-    font-weight: 400;
-}
-#footer {
-    padding-top: 50px;
-    text-align: center;
+body {
+    margin: 0;
 }
 #main {
     padding-left: 30px;
-}
-a {
-    color: #1aa0d8;
-    text-decoration: none;
-}
-a:hover {
-    text-decoration: underline;
-}
-body {
-    margin: 0;
 }
 #header {
     background-color: var(--light-green);
@@ -41,8 +27,22 @@ body {
     text-decoration: none;
     background-color: rgb(3, 187, 3);
 }
+#footer {
+    padding-top: 50px;
+    text-align: center;
+}
+a {
+    color: #1aa0d8;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
 a:active {
     color: red;
+}
+h1, h2 {
+    font-weight: 400;
 }
 button {
     background-color: var(--light-green);
