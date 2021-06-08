@@ -21,9 +21,6 @@ a {
 a:hover {
     text-decoration: underline;
 }
-a:visited {
-    color: #1aa0d8;
-}
 body {
     margin: 0;
 }
