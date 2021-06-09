@@ -37,17 +37,25 @@ function reference(link) {
         meta.setAttribute("charset", "UTF-8");
         document.head.appendChild(meta);
     }
-
-    function makeDraggable() {
-        document.querySelector("html").draggable = true; // It's fun to drag the page around
-    }
-
+    addFavicon();
     wrapMain();
     addFooter();
     addStylesheet();
     addHeader();
-    addFavicon();
     addCharEncoding();
-    // makeDraggable();
     // Hey. It's cringey code, but it works.
 }
+
+const pattern = /file:\/\/\/Users\/\w+\/Documents\/GitHub\/gosoccerboy5\.github\.io\//;
+// I have used a RegExp to represent my filesystem. If you're doing local development, 
+// make sure to change this to match your filesystem!!!!
+// (This should be the base of gosoccerboy5.github.io on your file system)
+// I used a regex so I don't reveal my computer username
+
+if (pattern.test(window.location.href)) {
+    reference(window.location.href.match(pattern)[0]);
+} else {
+    reference("https://gosoccerboy5.github.io");
+}
+
+
