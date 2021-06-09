@@ -51,6 +51,7 @@ const pattern = /file:\/\/\/Users\/\w+\/Documents\/GitHub\/gosoccerboy5\.github\
 // make sure to change this to match your filesystem!!!!
 // (This should be the base of gosoccerboy5.github.io on your file system)
 // I used a regex so I don't reveal my computer username
+// I should probably make a better, more customizable system but it works for now
 
 if (pattern.test(window.location.href)) {
     reference(window.location.href.match(pattern)[0]);
