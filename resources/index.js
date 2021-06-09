@@ -56,7 +56,7 @@ const pattern = /file:\/\/\/Users\/\w+\/Documents\/GitHub\/gosoccerboy5\.github\
 if (pattern.test(window.location.href)) {
     reference(window.location.href.match(pattern)[0]);
 } else {
-    reference("https://gosoccerboy5.github.io");
+    reference("https://gosoccerboy5.github.io/");
 }
 
 
