@@ -46,17 +46,9 @@ function reference(link) {
     // Hey. It's cringey code, but it works.
 }
 
-const pattern = /file:\/\/\/Users\/\w+\/Documents\/GitHub\/gosoccerboy5\.github\.io\//;
-// I have used a RegExp to represent my filesystem. If you're doing local development, 
-// make sure to change this to match your filesystem!!!!
-// (This should be the base of gosoccerboy5.github.io on your file system)
-// I used a regex so I don't reveal my computer username
-// I should probably make a better, more customizable system but it works for now
-
-if (pattern.test(window.location.href)) {
-    reference(window.location.href.match(pattern)[0]);
+if (/^(file:\/\/\/)|(C:)/i.test(window.location.href) && window.location.href.includes("gosoccerboy5.github.io/")) { // We are on a file system
+    reference(window.location.href.split("gosoccerboy5.github.io/")[0].concat("gosoccerboy5.github.io/"));
 } else {
     reference("https://gosoccerboy5.github.io/");
 }
-
 
