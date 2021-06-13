@@ -43,12 +43,13 @@ function reference(link) {
     addStylesheet();
     addHeader();
     addCharEncoding();
+    document.body.removeAttribute("style"); // Show the content
     // Hey. It's cringey code, but it works.
 }
+document.body.style.display = "none"; // We will hide the content until the page is loaded
 
 if (/^(file:\/\/\/)|(C:)/i.test(window.location.href) && window.location.href.includes("gosoccerboy5.github.io/")) { // We are on a file system
     reference(window.location.href.split("gosoccerboy5.github.io/")[0].concat("gosoccerboy5.github.io/"));
 } else {
     reference("https://gosoccerboy5.github.io/");
 }
-
