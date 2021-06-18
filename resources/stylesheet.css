@@ -31,6 +31,9 @@ body {
     padding-top: 50px;
     text-align: center;
 }
+#footer img {
+	border-radius: 50%;
+}
 a {
     color: #1aa0d8;
     text-decoration: none;
