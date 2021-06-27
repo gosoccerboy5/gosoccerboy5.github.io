@@ -1,21 +1,26 @@
 html {
     font-family: Helvetica Neue, Helvetica, sans-serif;
 }
+
 html:root {
     --light-green: #06d713;
 }
+
 body {
     margin: 0;
 }
+
 #main {
     padding-left: 30px;
 }
+
 #header {
     background-color: var(--light-green);
     padding: 20px 0px 20px 10px;
     cursor: default;
     user-select: none;
 }
+
 #header a {
     color: black;
     font-weight: 400;
@@ -23,30 +28,38 @@ body {
     padding: 20px 12px 20px 12px;
     transition-duration: 0.2s;
 }
+
 #header a:hover {
     text-decoration: none;
     background-color: rgb(3, 187, 3);
 }
+
 #footer {
     padding-top: 50px;
     text-align: center;
 }
+
 #footer img {
 	border-radius: 50%;
 }
+
 a {
     color: #1aa0d8;
     text-decoration: none;
 }
+
 a:hover {
     text-decoration: underline;
 }
+
 a:active {
     color: red;
 }
+
 h1, h2 {
     font-weight: 400;
 }
+
 button {
     background-color: var(--light-green);
     border: none;
@@ -55,29 +68,36 @@ button {
     height: 30px;
     transition-duration: 150ms;
 }
+
 button:active {
     background-color: green;
 }
+
 .small {
     font-size: 10px;
 }
+
 code {
     background-color: #d2d2d2;
     border-radius: 2px;
 }
+
 textarea {
     border: 2px solid black;
     border-radius: 2px;
 }
+
 textarea:focus, input:focus {
     outline: 0;
     -moz-appearance: none;
     -webkit-appearance: none;
 }
+
 input {
     border: none;
     border-bottom: 1px solid black;
 }
+
 input[type=radio]:focus {
     outline: auto !important;
     -moz-appearance: auto !important;
