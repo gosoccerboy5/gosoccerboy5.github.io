@@ -102,5 +102,4 @@ input[type=radio]:focus {
     outline: auto !important;
     -moz-appearance: auto !important;
     -webkit-appearance: auto !important;
-    /* Override some other settings from the other stylesheet */
 }
