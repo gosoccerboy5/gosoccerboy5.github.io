@@ -21,4 +21,3 @@ Include details about your browser and OS here. If possible, please identify if 
 
 **Additional context**
 Add any other context about the problem here.
-<!-- Thanks to https://github.com/theforumhelpers/theforumhelpers.github.io/blob/master/.github/ISSUE_TEMPLATE/bug_report.md -->
