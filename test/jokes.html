@@ -29,7 +29,7 @@
         <br>
         <br>
         <span class="small" title="Beware, many of the jokes are computer/programming-themed">Credit to <a href="https://github.com/jeffalo/my-ocular/blob/master/jokes.json">https://github.com/jeffalo/my-ocular/blob/master/jokes.json</a> for the jokes</span>
-        <script src="../resources/index.js"></script>
+        <script src="/resources/index.js"></script>
         <script>
             let jokes = null;
             let isLoading = false;
@@ -52,7 +52,7 @@
                 if (!isLoading) {
                     window.setTimeout(function() {
                         document.querySelector("#spinner").style.display = "none";
-                        alert(jokes[rand(0, jokes.length)] + "😂😂😂");
+                        alert(jokes[rand(0, jokes.length)] + "\n😂😂😂");
                         isLoading = false;
                     }, 2000);
                 }
