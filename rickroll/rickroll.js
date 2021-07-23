@@ -6,9 +6,4 @@ const rickroll = function (event) {
         console.info("https://scratch.mit.edu/discuss/post/5069102/");
     }, 500);
 }
-
-const rickrollLinks = document.getElementsByClassName("rickroll");
-for (let i = 0; i < rickrollLinks.length; i++) {
-    rickrollLinks[i].addEventListener("click", rickroll);
-    rickrollLinks[i].addEventListener("contextmenu", rickroll);
-}
+document.querySelectorAll(".rickroll").forEach(el => el.addEventListener("click", rickroll));
