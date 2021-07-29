@@ -37,6 +37,7 @@ body {
 #footer {
     padding-top: 50px;
     text-align: center;
+    user-select: none;
 }
 
 #footer img {
