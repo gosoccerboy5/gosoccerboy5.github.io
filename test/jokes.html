@@ -34,19 +34,22 @@
             let jokes = null;
             let isLoading = false;
             document.querySelector("#spinner").style.display = "none";
+            
             function fetchJokes() {
-                fetch("https://raw.githubusercontent.com/jeffalo/my-ocular/master/jokes.json").then(function(data) {
+                fetch("https://raw.githubusercontent.com/jeffalo/my-ocular/master/jokes.json").then(data => {
                     return data.json();
-                }).then(function(data) {
+                }).then(data => {
                     jokes = data;
-                }).catch(function(err) {
+                }).catch(err => {
                     console.log(err);
                     if (confirm("We had an error loading the jokes. Try again?")) {
                         fetchJokes();
                     }
                 });
             }
+            
             const rand = (min, max) => Math.floor(Math.random() * (max - min) + min);
+            
             document.querySelector("#tellJoke").addEventListener("click", function() {
                 document.querySelector("#spinner").style.display = "";
                 if (!isLoading) {
