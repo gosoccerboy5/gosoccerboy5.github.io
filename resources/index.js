@@ -48,15 +48,8 @@
     }
 
     if (location.hostname === "localhost") {
-        let script;
-        const scripts = document.querySelectorAll("script");
-        for (let _script of scripts) {
-            if (/resources\/index\.js$/.test(_script.src)) {
-                script = _script;
-                break;
-            }
-        }
-        // Really dumb hack to filter the script that is resources/index.js (ie, this file)
+        const script = Array.from(document.querySelectorAll("script"))
+            .find(scr => /resources\/index\.js$/.test(scr.src));
         if (script.getAttribute("ref") === null) {
             reference("/");
         } else {
