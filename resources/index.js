@@ -48,8 +48,7 @@
     }
 
     if (location.hostname === "localhost") {
-        const script = Array.from(document.querySelectorAll("script"))
-            .find(scr => /resources\/index\.js$/.test(scr.src));
+        const script = document.querySelector("script[src$='resources/index.js']");
         if (script.getAttribute("ref") === null) {
             reference("/");
         } else {
@@ -60,7 +59,7 @@
         // And if it has a `ref` attribute, we will reference that url
         // Otherwise, we just reference our base url
     } else if (location.host === "gosoccerboy5.github.io") {
-        reference("https://gosoccerboy5.github.io/"); // All right lets just use the fact that we're on them actual webpage
+        reference("https://gosoccerboy5.github.io/"); // All right lets just use the fact that we're on the actual webpage
         // And move on with our lives
     }
 })();
