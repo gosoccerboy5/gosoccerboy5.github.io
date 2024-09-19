@@ -4,7 +4,7 @@
         function addHeader() {
             var header = document.createElement("header");
             header.id = "header";
-            header.innerHTML = '<a href="' + link + '">Homepage</a>\n<a href="' + link + 'help/roadmap">Roadmap</a>';
+            header.innerHTML = '<a href="' + link + '">Homepage</a>\n<a href="' + link + 'help/roadmap">Roadmap</a>\n<a href="' + link + 'games">Games</a>';
             document.body.insertBefore(header, document.querySelector("#main"));
         }
 
